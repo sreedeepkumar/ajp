@@ -1,0 +1,33 @@
+import java.net.*;
+
+public class InetAddressDemo
+{
+    public static void main(String args[])
+    {
+        try
+        {
+            // Using getLocalHost()
+            InetAddress local = InetAddress.getLocalHost();
+            System.out.println("Local Host : " + local);
+
+            // Using getByName()
+            InetAddress google = InetAddress.getByName("www.google.com");
+            System.out.println("Google IP Address : " + google);
+
+            // Using getAllByName()
+            InetAddress addresses[] =
+                    InetAddress.getAllByName("www.google.com");
+
+            System.out.println("All IP Addresses of Google:");
+
+            for(InetAddress addr : addresses)
+            {
+                System.out.println(addr);
+            }
+        }
+        catch(Exception e)
+        {
+            System.out.println(e);
+        }
+    }
+}
