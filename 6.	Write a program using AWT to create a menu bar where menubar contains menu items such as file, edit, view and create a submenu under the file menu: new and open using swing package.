@@ -1,0 +1,42 @@
+import javax.swing.*;
+
+public class MenuDemo
+{
+    JFrame f;
+
+    MenuDemo()
+    {
+        f = new JFrame("Menu Bar Example");
+
+        JMenuBar mb = new JMenuBar();
+
+        JMenu file = new JMenu("File");
+        JMenu edit = new JMenu("Edit");
+        JMenu view = new JMenu("View");
+
+        JMenu submenu = new JMenu("SubMenu");
+
+        JMenuItem newItem = new JMenuItem("New");
+        JMenuItem openItem = new JMenuItem("Open");
+
+        submenu.add(newItem);
+        submenu.add(openItem);
+
+        file.add(submenu);
+
+        mb.add(file);
+        mb.add(edit);
+        mb.add(view);
+
+        f.setJMenuBar(mb);
+
+        f.setSize(400, 300);
+        f.setLayout(null);
+        f.setVisible(true);
+    }
+
+    public static void main(String args[])
+    {
+        new MenuDemo();
+    }
+}
