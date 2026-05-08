@@ -29,3 +29,8 @@ public class LayoutDemo extends Frame
         new LayoutDemo();
     }
 }
+
+
+TO CHANGE LAYOUT
+setLayout(new BorderLayout());
+setLayout(new GridLayout(2,3));
